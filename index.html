@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deiky Catur Hadi | Portofolio</title>
+<meta name="description" content="Portofolio Deiky Catur Hadi, Manager HRGA &amp; IT dan Sekretaris Perusahaan di PT Persada Medika Utama.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0C1116;--bg2:#131A21;--line:#243039;--text:#F1EDE2;--mut:#A9B3BC;--sage:#8BA595;--gold:#C9A96E;--blue:#7FA3BD}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--text);font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;font-size:16px}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1,h2,h3{font-family:"Lora",Georgia,serif;font-weight:600;line-height:1.2}
+h2{font-size:clamp(28px,4vw,40px);margin:12px 0 16px}
+.lead{color:var(--mut);max-width:680px}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(12,17,22,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:"Lora",Georgia,serif;font-weight:600;text-decoration:none;font-size:18px}
+.brand span{color:var(--gold)}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{text-decoration:none;color:var(--mut);font-size:14px}
+.menu a:hover{color:var(--text)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:6px 12px;border-radius:8px;cursor:pointer;font:inherit}
+/* hero */
+#home{border-top:0;padding:150px 0 40px}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(40px,6vw,68px);margin:14px 0 18px}
+.hero h1 em{font-style:normal;color:var(--sage)}
+.role{color:var(--mut);font-size:17px;max-width:620px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;background:var(--text);color:var(--bg);text-decoration:none;font-weight:600;font-size:14px;border:1px solid var(--text);cursor:pointer;font-family:inherit}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn.ghost:hover,.btn:hover{opacity:.88}
+.btn.small{padding:8px 14px;font-size:13px}
+.photo{position:relative}
+.photo img{width:100%;border-radius:18px;border:1px solid var(--line);display:block;aspect-ratio:3/4;object-fit:cover;object-position:center top}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg2)}
+.stats div{padding:22px 24px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:"Lora",Georgia,serif;font-size:30px;color:var(--text)}
+.stats span{font-size:13px;color:var(--mut)}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.quote{font-family:"Lora",Georgia,serif;font-size:22px;line-height:1.5;border-left:3px solid var(--gold);padding-left:20px;margin-bottom:24px}
+.about p{color:var(--mut);margin-bottom:16px}
+.steps{display:grid;gap:12px;margin-top:8px}
+.step{display:grid;grid-template-columns:36px 1fr;gap:14px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.step i{font-style:normal;width:36px;height:36px;border-radius:50%;background:var(--sage);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:700}
+.step b{display:block;font-family:"Lora",Georgia,serif;font-weight:600}
+.step span{color:var(--mut);font-size:14px}
+/* experience */
+.timeline{display:grid;gap:18px;margin-top:40px}
+.item{display:grid;grid-template-columns:200px 1fr;gap:12px 28px;border-top:1px dashed var(--line);padding-top:18px}
+.item .when{color:var(--gold);font-size:13px;font-weight:600}
+.item h3{font-size:20px}
+.item .org{color:var(--sage);font-size:14px}
+.item p:last-child{color:var(--mut);grid-column:2}
+.item .org,.item h3{grid-column:2}
+/* projects */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:36px 0 28px}
+.filters button{background:transparent;color:var(--mut);border:1px solid var(--line);padding:8px 16px;border-radius:999px;cursor:pointer;font:inherit;font-size:14px}
+.filters button.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--bg2);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card[hidden]{display:none}
+.tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);font-weight:600}
+.card h3{font-size:19px}
+.card .sub{color:var(--mut);font-size:14px}
+.card details{color:var(--mut);font-size:14px}
+.card summary{cursor:pointer;color:var(--text);font-size:14px;margin:4px 0}
+.card details p{margin-bottom:8px}
+.card details b{color:var(--text)}
+.actions{margin-top:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:6px}
+.dummy{font-size:12px;color:var(--mut)}
+.policy{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.policy div{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:22px}
+.policy h4{font-family:"Lora",Georgia,serif;font-size:18px;margin-bottom:12px}
+.policy ul{list-style:none;color:var(--mut);font-size:14px}
+.policy li{padding:5px 0;border-bottom:1px dashed var(--line)}
+.policy li:last-child{border-bottom:0}
+/* skills */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.chips span{border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:8px 16px;font-size:14px}
+.note{color:var(--mut);font-size:14px;margin-top:20px}
+.sk{display:grid;gap:14px;margin-top:8px}
+.bar{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.bar b{display:block;margin-bottom:4px}
+.bar span{color:var(--mut);font-size:14px}
+/* credentials */
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.creds ul{list-style:none;margin-top:24px;display:grid;gap:12px}
+.creds li{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;gap:4px}
+.creds li span{color:var(--mut);font-size:14px}
+.edu{margin-top:28px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:18px}
+.edu b{font-family:"Lora",Georgia,serif;font-size:18px}
+.edu span{display:block;color:var(--mut);font-size:14px}
+.trainings{margin-top:28px;display:grid;gap:14px}
+.trainings div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.trainings b{color:var(--sage);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.trainings p{color:var(--mut);font-size:14px;margin-top:6px}
+/* contact */
+#contact{padding-bottom:120px}
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(32px,5vw,52px)}
+.links{display:grid;gap:12px}
+.links a{display:flex;justify-content:space-between;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-decoration:none}
+.links a span:first-child{color:var(--mut);font-size:13px}
+.links a:hover{border-color:var(--gold)}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--mut);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* responsive */
+@media (max-width:920px){
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 24px;border-bottom:1px solid var(--line)}
+  .menu.open{display:flex}
+  .burger{display:block}
+  .hero,.about,.skills,.creds,.contact{grid-template-columns:1fr;gap:36px}
+  .photo{max-width:360px}
+  .grid,.policy{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stats div:nth-child(2){border-right:0}
+  .stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media (max-width:620px){
+  section{padding:72px 0}
+  .grid,.policy{grid-template-columns:1fr}
+  .item{grid-template-columns:1fr}
+  .item .org,.item h3,.item p:last-child{grid-column:1}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home">Deiky<span>.</span></a>
+    <ul class="menu">
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#projects">Proyek</a></li>
+      <li><a href="#skills">Keahlian</a></li>
+      <li><a href="#credentials">Kredensial</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+    <button class="burger" aria-label="Menu">Menu</button>
+  </div>
+</nav>
+
+<header id="home">
+  <div class="wrap hero">
+    <div>
+      <span class="eyebrow">Portofolio · Manager HRGA & IT dan Sekretaris Perusahaan</span>
+      <h1>Deiky Catur <em>Hadi</em></h1>
+      <p class="role">Mengelola fungsi Human Resource, General Affair, dan Information Technology di PT Persada Medika Utama. Saya membangun sistem internal yang membuat proses kerja lebih tertib, efisien, dan terukur.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">Lihat Proyek</a>
+        <a class="btn ghost" href="Portofolio_DCH.pdf" target="_blank" rel="noopener">Unduh CV (PDF)</a>
+        <a class="btn ghost" href="#contact">Hubungi Saya</a>
+      </div>
+    </div>
+    <div class="photo"><img src="foto.jpg" alt="Foto Deiky Catur Hadi"></div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div><b>15</b><span>Aplikasi internal</span></div>
+      <div><b>4</b><span>Kategori fungsi</span></div>
+      <div><b>4</b><span>Sertifikasi profesi</span></div>
+      <div><b>2021</b><span>Berkarier di HRGA &amp; IT</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <span class="eyebrow">Tentang</span>
+      <h2>People. Process. Technology.</h2>
+      <p class="quote">Mengintegrasikan manusia, proses, dan teknologi untuk membangun sistem yang efektif, menciptakan solusi strategis, dan memberikan nilai tambah bagi perusahaan.</p>
+      <p>Saat ini saya mengelola fungsi Human Resource, General Affair, dan Information Technology di PT Persada Medika Utama, perusahaan laboratorium medis dan klinik, sekaligus mendampingi pimpinan sebagai Sekretaris Perusahaan. Sejak 2021, saya meniti karier dari supervisor hingga manajer.</p>
+      <p>Saya menguasai Microsoft Office dan Google Workspace, serta memaksimalkan teknologi AI untuk mengotomatisasi proses kerja yang ditujukan untuk efisiensi waktu.</p>
+    </div>
+    <div>
+      <span class="eyebrow">Pendekatan Kerja</span>
+      <p style="margin-top:12px">Pola implementasi strategi sebelum merancang program kerja dan sistem internal.</p>
+      <div class="steps">
+        <div class="step"><i>1</i><div><b>Pengumpulan</b><span>Menghimpun penyebab masalah dari data dan kondisi lapangan.</span></div></div>
+        <div class="step"><i>2</i><div><b>Analisis</b><span>Menelusuri penyebab hingga ke akar masalah.</span></div></div>
+        <div class="step"><i>3</i><div><b>Perancangan Solusi</b><span>Menyusun solusi yang sesuai dengan kebutuhan pengguna.</span></div></div>
+        <div class="step"><i>4</i><div><b>Pencapaian Hasil</b><span>Berorientasi pada hasil yang dapat digunakan dan diukur.</span></div></div>
+        <div class="step"><i>5</i><div><b>Evaluasi</b><span>Mengevaluasi hasil, kemudian menindaklanjutinya.</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow" style="display:block;margin-top:64px">Pengalaman Kerja</span>
+    <div class="timeline"><div class="item"><span class="when">Februari 2026 – Sekarang</span><h3>Manager HRGA &amp; IT dan Sekretaris Perusahaan</h3><p class="org">PT Persada Medika Utama</p><p>Mengelola operasional dan anggaran Human Resource, General Affair, dan Information Technology, termasuk perizinan dan kepatuhan terhadap regulasi, serta mendukung kegiatan pimpinan.</p></div><div class="item"><span class="when">Agustus 2024 – Februari 2026</span><h3>Manager HRGA &amp; IT</h3><p class="org">PT Persada Medika Utama</p><p>Merencanakan strategi dan operasional HRGA dan IT, mengawasi perizinan perusahaan, serta mengembangkan kebijakan.</p></div><div class="item"><span class="when">Agustus 2021 – Agustus 2024</span><h3>HRGA &amp; IT Supervisor</h3><p class="org">PT Persada Medika Utama</p><p>Mengawasi administrasi kepegawaian, fasilitas, aset, dan pemeliharaan sistem IT.</p></div><div class="item"><span class="when">September 2020 – Agustus 2021</span><h3>Admin Laboratorium</h3><p class="org">PT Tritunggal Sentra Utama</p><p>Mengelola administrasi, pencatatan hasil pemeriksaan, dan pengarsipan dokumen laboratorium.</p></div><div class="item"><span class="when">Maret 2018 – Juni 2019</span><h3>Call Center AirAsia</h3><p class="org">PT Infomedia Solusi Humanika</p><p>Memberikan layanan informasi dan menangani keluhan pelanggan.</p></div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <span class="eyebrow">Proyek</span>
+    <h2>15 aplikasi internal</h2>
+    <p class="lead">Setiap proyek dimulai dari masalah nyata di lapangan. Beberapa aplikasi punya demo yang bisa dicoba langsung, dengan data dummy.</p>
+    <div class="filters">
+      <button class="on" data-f="all">Semua</button>
+      <button data-f="hr">Human Resources</button>
+      <button data-f="core">Core Bisnis</button>
+      <button data-f="mgmt">Manajemen</button>
+      <button data-f="ga">General Affair</button>
+    </div>
+    <div class="grid">
+    <article class="card" data-cat="hr" style="--c:#3E5C76">
+      <span class="tag">Human Resources</span>
+      <h3>Tes Tulis Daring</h3>
+      <p class="sub">Tes tulis seleksi dan evaluasi karyawan secara daring.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Koreksi dan rekapitulasi nilai secara manual memakan waktu, rawan salah hitung, dan menyulitkan perbandingan hasil antarpeserta.</p>
+        <p><b>Solusi.</b> Tes dikerjakan secara daring, soal dan kunci jawaban tersimpan terpusat, serta nilai dihitung otomatis.</p>
+        <p><b>Hasil.</b> Nilai langsung tersedia setelah tes selesai, dengan standar penilaian yang sama bagi seluruh peserta.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Bank soal ditinjau secara berkala, dan soal yang kurang membedakan kemampuan peserta diganti.</p>
+      </details>
+      <div class="actions"><a class="btn ghost small" href="https://hadi-apps.github.io/Demo-Only/#/tes" target="_blank" rel="noopener">Coba Demo ↗</a><span class="dummy">Data Dummy</span></div>
+    </article>
+    <article class="card" data-cat="hr" style="--c:#3E5C76">
+      <span class="tag">Human Resources</span>
+      <h3>Perhitungan Insentif Otomatis</h3>
+      <p class="sub">Perhitungan insentif berbasis aturan yang ditetapkan sejak awal.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Insentif terdiri atas banyak komponen sehingga perhitungan manual rawan keliru dan sulit ditelusuri.</p>
+        <p><b>Solusi.</b> Aturan dijadikan rumus baku, sehingga hasil beserta rinciannya dihitung otomatis dari data terstruktur.</p>
+        <p><b>Hasil.</b> Perhitungan konsisten antarperiode dan setiap angka dapat ditelusuri asalnya.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Rumus ditinjau saat kebijakan berubah dan dicocokkan dengan perhitungan sebelumnya.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="hr" style="--c:#3E5C76">
+      <span class="tag">Human Resources</span>
+      <h3>Employee of the Month</h3>
+      <p class="sub">Aplikasi berbasis web untuk pemilihan karyawan terbaik dengan skor otomatis.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Kriteria dan bobot yang belum jelas membuat pemilihan karyawan terbaik rawan subjektif.</p>
+        <p><b>Solusi.</b> Kriteria dan bobot ditetapkan sejak awal, sedangkan skor dan peringkat dihitung otomatis.</p>
+        <p><b>Hasil.</b> Peringkat memiliki dasar angka yang dapat dijelaskan, sehingga prosesnya lebih transparan.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Bobot kriteria dievaluasi setiap periode dengan mempertimbangkan masukan atasan.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="hr" style="--c:#3E5C76">
+      <span class="tag">Human Resources</span>
+      <h3>KPI Assessment</h3>
+      <p class="sub">Penilaian kinerja berjenjang dari staf hingga direksi.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Penilaian melibatkan banyak pihak. Tanpa alur yang jelas, sulit diketahui siapa yang sudah menilai dan menyetujui.</p>
+        <p><b>Solusi.</b> Persetujuan enam tahap hingga disahkan direksi, dilengkapi jejak audit, tanda tangan QR, dan notifikasi email.</p>
+        <p><b>Hasil.</b> Setiap tahap tercatat, staf memiliki jalur keberatan, dan hasil dapat diekspor secara massal ke PDF.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Pengingat tenggat waktu berjalan otomatis, dan alur disesuaikan pada setiap siklus penilaian.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="hr" style="--c:#3E5C76">
+      <span class="tag">Human Resources</span>
+      <h3>HRIS</h3>
+      <p class="sub">Aplikasi Human Resource berbasis PWA yang tetap dapat digunakan tanpa koneksi internet (offline-first).</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Pengajuan dan administrasi karyawan membutuhkan alur yang jelas dan harus tetap dapat digunakan saat koneksi lemah.</p>
+        <p><b>Solusi.</b> PWA dengan proses masuk (login) menggunakan NIK, enam tingkat hak akses, rantai persetujuan dari Master Hierarki Jabatan, serta notifikasi per peran.</p>
+        <p><b>Hasil.</b> Rilis stabil v14 menjadi dasar, sedangkan formulir izin dan modul kehadiran sedang dilanjutkan.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Tahap berikutnya: formulir Izin Sakit dan Izin, serta modul kehadiran GPS (radius 15 meter).</p>
+      </details>
+      <div class="actions"><a class="btn ghost small" href="https://hadi-apps.github.io/Demo-Only/#/hris" target="_blank" rel="noopener">Coba Demo ↗</a><span class="dummy">Data Dummy</span></div>
+    </article>
+    <article class="card" data-cat="core" style="--c:#5C8A77">
+      <span class="tag">Core Bisnis</span>
+      <h3>MCU Processor</h3>
+      <p class="sub">Aplikasi klinik untuk pengolahan hasil pasien MCU secara otomatis, beserta interpretasi dokter.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Hasil pemeriksaan MCU harus diolah per pasien dan dicocokkan dengan nilai rujukan. Pekerjaan ini berulang dan menuntut ketelitian.</p>
+        <p><b>Solusi.</b> Hasil diolah otomatis menggunakan formularium yang disesuaikan dengan standar klinisi, kemudian dilengkapi interpretasi dokter dalam laporan.</p>
+        <p><b>Hasil.</b> Format laporan seragam, dan dokter dapat memusatkan waktu pada interpretasi.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Formularium diperbarui bersama klinisi saat standar berubah. Data pasien tidak ditampilkan dalam portofolio ini.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="core" style="--c:#5C8A77">
+      <span class="tag">Core Bisnis</span>
+      <h3>PDFlocker</h3>
+      <p class="sub">Aplikasi laboratorium: PDF hasil pasien dikunci secara otomatis setelah diproduksi oleh sistem.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> PDF hasil pasien memuat data rahasia dan perlu dilindungi sebelum sampai kepada penerima.</p>
+        <p><b>Solusi.</b> Begitu PDF diproduksi oleh sistem, aplikasi langsung mengenkripsi dan mengunci berkas tanpa langkah manual.</p>
+        <p><b>Hasil.</b> Setiap PDF hasil pasien keluar dalam kondisi terkunci sehingga kerahasiaan pasien lebih terjaga.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Pengelolaan kunci dan akses ditinjau secara berkala, dan alurnya diperiksa saat format hasil atau sistem berubah.</p>
+      </details>
+      <div class="actions"><a class="btn ghost small" href="https://hadi-apps.github.io/Demo-Only/#/pdflocker" target="_blank" rel="noopener">Coba Demo ↗</a><span class="dummy">Data Dummy</span></div>
+    </article>
+    <article class="card" data-cat="mgmt" style="--c:#A98C5A">
+      <span class="tag">Manajemen</span>
+      <h3>Sistem Manajemen Mutu</h3>
+      <p class="sub">Sistem mutu laboratorium dengan acuan ISO 15189:2022.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Dokumen mutu, temuan, dan tindak lanjutnya tersebar sehingga statusnya sulit dipantau.</p>
+        <p><b>Solusi.</b> Satu aplikasi untuk mencatat dan memantau elemen sistem mutu dengan mengacu pada ISO 15189:2022.</p>
+        <p><b>Hasil.</b> Dikembangkan secara bertahap sesuai prioritas kebutuhan mutu.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Modul inti dievaluasi bersama tim mutu sebelum modul berikutnya ditambahkan.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="mgmt" style="--c:#A98C5A">
+      <span class="tag">Manajemen</span>
+      <h3>Pengendali Dokumen</h3>
+      <p class="sub">Pengendalian versi, revisi, dan distribusi dokumen.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Versi dokumen yang beredar dapat berbeda sehingga berisiko menggunakan dokumen yang sudah tidak berlaku.</p>
+        <p><b>Solusi.</b> Daftar induk, versi, tanggal berlaku, dan riwayat revisi dicatat dalam satu sistem.</p>
+        <p><b>Hasil.</b> Sasaran: hanya versi yang berlaku yang mudah ditemukan oleh staf.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Diuji pada sebagian dokumen terlebih dahulu sebelum digunakan oleh seluruh departemen.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="mgmt" style="--c:#A98C5A">
+      <span class="tag">Manajemen</span>
+      <h3>Command Center</h3>
+      <p class="sub">Pusat pemantauan terpadu dengan pola kerja menyerupai sistem EDP.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Informasi operasional tersebar di banyak aplikasi dan berkas sehingga pemantauan lambat.</p>
+        <p><b>Solusi.</b> Satu aplikasi pusat yang menghimpun data dari sistem yang ada dan menampilkannya secara ringkas.</p>
+        <p><b>Hasil.</b> Pimpinan dapat melihat kondisi operasional dari satu tempat.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Indikator ditinjau bersama pengguna dan ditambah sesuai kebutuhan pengambilan keputusan.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="mgmt" style="--c:#A98C5A">
+      <span class="tag">Manajemen</span>
+      <h3>Sistem Pelaporan Direksi</h3>
+      <p class="sub">Pelaporan berkala kepada direksi dalam satu aplikasi.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Laporan untuk direksi dikumpulkan dari beberapa sumber dengan format berbeda, sehingga penyusunannya memakan waktu dan sulit diseragamkan.</p>
+        <p><b>Solusi.</b> Data laporan dihimpun dalam satu aplikasi, kemudian disajikan dengan format baku pada setiap periode pelaporan.</p>
+        <p><b>Hasil.</b> Direksi menerima laporan yang seragam dan lebih cepat disiapkan.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Isi dan format laporan disesuaikan dengan kebutuhan direksi pada setiap periode.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="mgmt" style="--c:#A98C5A">
+      <span class="tag">Manajemen</span>
+      <h3>Monitoring Legalitas</h3>
+      <p class="sub">Pemantauan masa berlaku legalitas perusahaan serta legalitas profesi tenaga medis dan tenaga kesehatan.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Izin perusahaan dan legalitas profesi tenaga medis serta tenaga kesehatan memiliki masa berlaku masing-masing, sehingga mudah terlewat apabila dicatat terpisah.</p>
+        <p><b>Solusi.</b> Daftar legalitas perusahaan dan profesi (misalnya STR dan SIP) dilengkapi tanggal berlaku, status, dan pengingat sebelum jatuh tempo.</p>
+        <p><b>Hasil.</b> Dokumen yang mendekati jatuh tempo terlihat lebih awal sehingga perpanjangan dapat diurus tepat waktu.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Daftar diperbarui setiap ada izin baru, dan penanggung jawab setiap dokumen dipertegas.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="mgmt" style="--c:#A98C5A">
+      <span class="tag">Manajemen</span>
+      <h3>Penomoran Surat Otomatis</h3>
+      <p class="sub">Nomor surat dibuat otomatis dari email permintaan.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Nomor surat yang dibuat secara manual rawan ganda atau terlewat, dan riwayatnya sulit dilacak.</p>
+        <p><b>Solusi.</b> Apps Script membaca email, membuat nomor dari rumus, mencatat ke sheet HISTORY, lalu membalas dengan hasilnya.</p>
+        <p><b>Hasil.</b> Nomor dibuat otomatis dan tercatat. Masalah thread lama yang membuat sheet tujuan salah terdeteksi sudah diperbaiki.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Pemohon diarahkan mengirim email baru, dan format subjek yang gagal terbaca dipantau melalui balasan kesalahan.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="ga" style="--c:#6F7F91">
+      <span class="tag">General Affair</span>
+      <h3>GAIS</h3>
+      <p class="sub">General Affair Information System: sistem penunjang pengelolaan kebutuhan General Affair.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Kebutuhan umum perusahaan masih tersebar dan sulit dipantau.</p>
+        <p><b>Solusi.</b> Sistem terpadu untuk mencatat dan memantau pekerjaan General Affair, dikembangkan secara bertahap.</p>
+        <p><b>Hasil.</b> Cakupan modul disusun sesuai prioritas kebutuhan.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Modul diuji bersama pengguna harian sebelum diperluas.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    <article class="card" data-cat="ga" style="--c:#6F7F91">
+      <span class="tag">General Affair</span>
+      <h3>Konversi dan Kompresi Berkas</h3>
+      <p class="sub">Aplikasi ringan untuk mengubah format dan memperkecil ukuran berkas.</p>
+      <details>
+        <summary>Lihat detail</summary>
+        <p><b>Masalah dan Penyebab.</b> Berkas dengan format beragam dan ukuran besar menyulitkan proses unggah, pengiriman, dan penyimpanan.</p>
+        <p><b>Solusi.</b> Aplikasi ringan yang mengonversi format dan mengompres berkas secara otomatis dalam satu proses.</p>
+        <p><b>Hasil.</b> Berkas siap digunakan dengan ukuran lebih kecil dan langkah kerja lebih singkat.</p>
+        <p><b>Evaluasi dan Tindak Lanjut.</b> Format yang didukung ditambah sesuai kebutuhan pengguna.</p>
+      </details>
+      <div class="actions"></div>
+    </article>
+    </div>
+    <div class="policy">
+      <div><h4>Program Kebijakan HR</h4><ul><li>Perancangan Peraturan Perusahaan</li><li>Suksesi Jabatan</li><li>KPI</li><li>Greeting &amp; Grooming</li><li>Ikatan Dinas Diklat</li><li>Employee of the Month</li><li>Struktur Golongan Jabatan &amp; Upah</li><li>Penerimaan Magang</li></ul></div>
+      <div><h4>Pengembangan Internal IT</h4><ul><li>Pengembangan internal: pembuatan sistem aplikasi dan otomatisasi proses.</li></ul></div>
+      <div><h4>Program Kebijakan GA</h4><ul><li>Pemantauan rutin inventaris bergerak dan tidak bergerak.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap skills">
+    <div>
+      <span class="eyebrow">Keahlian</span>
+      <h2>Yang saya kerjakan sehari-hari</h2>
+      <div class="chips">
+        <span>Kepemimpinan</span><span>Pemecahan Masalah</span><span>Berpikir Kritis</span><span>Komunikasi Efektif</span><span>Kooperatif dalam Tim</span><span>Administrasi</span><span>Administrasi Perusahaan</span>
+      </div>
+      <p class="note">Keahlian ini saya terapkan di bidang Human Resource, General Affair, dan Information Technology.</p>
+    </div>
+    <div class="sk">
+      <div class="bar"><b>Microsoft Office</b><span>Pengolahan dokumen, laporan, dan data.</span></div>
+      <div class="bar"><b>Google Workspace</b><span>Kolaborasi dokumen, sheet, dan jadwal tim.</span></div>
+      <div class="bar"><b>Otomasi dan AI</b><span>Memaksimalkan AI untuk mengotomatisasi proses kerja yang ditujukan untuk efisiensi waktu.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap creds">
+    <div>
+      <span class="eyebrow">Kredensial</span>
+      <h2>Sertifikasi dan Pelatihan</h2>
+      <ul><li><b>Certified Human Capital Manager (CHCM)</b><span>Wahana Insan Prima (Kemenaker RI) · Juni 2025</span></li><li><b>Pemahaman ISO 15189:2022</b><span>BSN · Oktober 2025</span></li><li><b>Auditor Internal ISO 15189:2022</b><span>BSN · November 2025</span></li><li><b>Ahli K3 Umum</b><span>GSI Selamat Indonesia (Kemenaker RI) · Februari – Maret 2026</span></li></ul>
+    </div>
+    <div>
+      <span class="eyebrow">Pelatihan</span>
+      <div class="trainings">
+        <div><b>Human Resource</b><p>KPI · Struktur dan Skala Upah · Perlindungan Tenaga Kerja (Kemenaker) · Balanced Scorecard (BSC) · Objectives and Key Results (OKR)</p></div>
+        <div><b>General Affair</b><p>Manajemen dan Fasilitas Kesehatan · POPAL · Pendidikan K3 Dasar</p></div>
+      </div>
+      <div class="edu"><b>Pendidikan Bahasa Inggris</b><span>Universitas PGRI Adi Buana Surabaya · 2013 – 2017</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <span class="eyebrow">Kontak</span>
+      <h2>Mari berdiskusi tentang proses kerja Anda.</h2>
+      <p class="lead">Saya terbuka untuk diskusi seputar HRGA, administrasi perusahaan, dan pengembangan sistem internal.</p>
+    </div>
+    <div class="links">
+      <a href="https://wa.me/6285731141444" target="_blank" rel="noopener"><span>WhatsApp</span><span>+62 857-3114-1444</span></a>
+      <a href="mailto:hdcworkonly@gmail.com"><span>Email</span><span>hdcworkonly@gmail.com</span></a>
+      <a href="Portofolio_DCH.pdf" target="_blank" rel="noopener"><span>Dokumen</span><span>Unduh CV (PDF)</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Deiky Catur Hadi · Surabaya</span>
+    <span>Portofolio daring</span>
+  </div>
+</footer>
+
+<script>
+const btns=[...document.querySelectorAll('.filters button')];
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.classList.toggle('on',x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll('.card').forEach(c=>{c.hidden=!(f==='all'||c.dataset.cat===f);});
+}));
+const burger=document.querySelector('.burger'), menu=document.querySelector('.menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+</script>
+</body>
+</html>
